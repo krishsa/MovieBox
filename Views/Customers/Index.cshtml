@@ -1,0 +1,29 @@
+﻿@model  IEnumerable<MovieBox.Models.Customer>;
+
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<h5>Customers</h5>
+<div>
+    <table class="tabel table-bordered tabel-hover" style="width:100%">
+        <thead>
+            <tr>
+            <td>Customer Name</td>
+                <td>Membership Type</td>
+             <td>Discount Rate</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cust in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(cust.Name, "Edit", "Customers", new { id = cust.Id })</td>
+                    <td>@cust.MembershipType.Name</td>
+                    <td>@cust.MembershipType.DiscountRate%</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

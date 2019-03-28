@@ -1,0 +1,15 @@
+﻿@model MovieBox.Models.Customer;
+
+@{
+    ViewData["Title"] = "Customer Details";
+}
+
+<h4>@Model.Name</h4>
+<ul>
+    <li>Memebership Type: @Model.MembershipType.Name</li>
+    @if (Model.BirthDate.HasValue)
+    {
+        <li>Birth Date: @Model.BirthDate.Value.ToShortDateString()</li>
+    }
+
+</ul>

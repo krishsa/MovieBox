@@ -1,0 +1,38 @@
+﻿@model List<MovieBox.Models.Movie>
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<h5>Movies</h5>
+<div class="" form-group">
+    @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary"})
+</div>
+<div class="form-group">
+
+</div>
+<div>
+    <table class="tabel table-bordered tabel-hover" style="width:100%">
+        <thead>
+            <tr>
+                <td>Movies</td>
+                <td>Genre</td>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(movie.Name, "Edit", "Movies", new { id = movie.Id })
+                    </td>
+                    <td>
+                        @movie.Genre.Name
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>

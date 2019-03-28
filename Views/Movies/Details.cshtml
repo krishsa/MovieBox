@@ -1,0 +1,13 @@
+﻿@model MovieBox.Models.Movie;
+
+@{
+    ViewData["Title"] = "Movie Details";
+}
+
+<h4>@Model.Name</h4>
+<ul>
+    <li>Genre: @Model.Genre.Name</li>
+    <li>Release Date: @Model.ReleaseDate</li>
+    <li>Date Added: @Model.DateAdded</li>
+    <li>Number in Stock: @Model.NumberInStock</li>
+</ul>
