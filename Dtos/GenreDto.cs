@@ -1,10 +1,10 @@
 ﻿using System;
+
 namespace MovieBox.Dtos
 {
     public class GenreDto
     {
-        public GenreDto()
-        {
-        }
+        public byte Id { get; set; }
+        public string Name { get; set; }
     }
 }
